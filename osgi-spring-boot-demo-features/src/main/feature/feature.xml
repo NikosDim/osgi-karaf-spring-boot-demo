@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<features name="osgi-karaf-spring-boot-demo" xmlns="http://karaf.apache.org/xmlns/features/v1.4.0">
+
+    <feature name="osgi-spring-boot-demo-feature" version="${project.version}">
+        <bundle>mvn:com.nemesis/osgi-spring-boot-demo-bundle/${project.version}</bundle>
+    </feature>
+
+</features>
