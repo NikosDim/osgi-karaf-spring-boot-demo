@@ -12,6 +12,8 @@
 
     <artifactId>osgi-spring-boot-demo-bundle</artifactId>
 
+    <packaging>bundle</packaging>
+
     <properties>
         <bundle.plugin.version>3.3.0</bundle.plugin.version>
     </properties>
@@ -55,11 +57,11 @@
                         <Bundle-Name>${project.name}</Bundle-Name>
                         <Bundle-Version>${project.version}</Bundle-Version>
                         <Bundle-Activator>
-                            SpringBootBundleActivator
+                            com.nemesis.osgi.springboot.SpringBootBundleActivator
                         </Bundle-Activator>
-                        <Export-Package>springboot</Export-Package>
+                        <Export-Package>com.nemesis.osgi.springboot</Export-Package>
                         <Private-Package>
-                            springboot.*
+                            com.nemesis.osgi.springboot.*
                         </Private-Package>
                         <Import-Package>
                             !org.springframework.*,
@@ -72,7 +74,7 @@
                             true
                         </Embed-Transitive>
                     </instructions>
-                    <buildDirectory>target/deploy</buildDirectory>
+                    <!--<buildDirectory>target/deploy</buildDirectory>-->
                 </configuration>
             </plugin>
         </plugins>

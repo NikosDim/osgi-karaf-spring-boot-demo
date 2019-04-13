@@ -7,8 +7,7 @@ import org.springframework.context.annotation.Configuration;
 public class ControllerConfig {
 
     @Bean
-    SimpleController simpleController() {
-        return new SimpleController();
+    HelloController helloController() {
+        return new HelloController();
     }
-
 }

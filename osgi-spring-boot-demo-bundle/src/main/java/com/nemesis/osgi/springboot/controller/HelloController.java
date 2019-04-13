@@ -4,11 +4,11 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class SimpleController {
+public class HelloController {
 
-    @GetMapping("/echo")
+    @GetMapping("/hello")
     public String echo() {
-        return "echo";
+        return "world";
     }
 
 }
