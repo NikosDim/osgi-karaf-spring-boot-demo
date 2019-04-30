@@ -15,7 +15,7 @@
     <packaging>bundle</packaging>
 
     <properties>
-        <bundle.plugin.version>4.1.0</bundle.plugin.version>
+        <bundle.plugin.version>4.2.0</bundle.plugin.version>
     </properties>
 
 
