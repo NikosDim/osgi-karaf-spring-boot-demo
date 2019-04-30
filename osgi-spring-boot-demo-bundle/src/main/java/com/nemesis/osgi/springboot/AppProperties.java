@@ -16,6 +16,7 @@ public class AppProperties {
 
             if (is != null) {
                 myProps.load(is);
+                System.out.println("SUCCESS: " + myProps.get("myProp"));
             } else {
                 System.out.println("FAILED TO LOAD FILE");
             }
