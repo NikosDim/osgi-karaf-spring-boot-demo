@@ -39,10 +39,39 @@
             <version>${osgi.version}</version>
             <scope>provided</scope>
         </dependency>
+        <dependency>
+            <groupId>org.osgi</groupId>
+            <artifactId>org.osgi.compendium</artifactId>
+            <version>5.0.0</version>
+        </dependency>
     </dependencies>
 
     <build>
         <plugins>
+
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>build-helper-maven-plugin</artifactId>
+                <version>3.0.0</version>
+                <executions>
+                    <execution>
+                        <id>attach-artifacts</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>attach-artifact</goal>
+                        </goals>
+                        <configuration>
+                            <artifacts>
+                                <artifact>
+                                    <file>src/main/resources/application.cfg</file>
+                                    <type>cfg</type>
+                                    <classifier>application</classifier>
+                                </artifact>
+                            </artifacts>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
 
             <plugin>
                 <groupId>org.apache.felix</groupId>
@@ -74,10 +103,11 @@
                             true
                         </Embed-Transitive>
                         <Include-Resource>
-                            src/main/resources/application.properties
+                            src/main/resources/application.cfg
                         </Include-Resource>
+                        <Service-Component>*</Service-Component>
+                        <_dsannotations>*</_dsannotations>
                     </instructions>
-                    <!--<buildDirectory>target/deploy</buildDirectory>-->
                 </configuration>
             </plugin>
         </plugins>

@@ -12,7 +12,7 @@ public class AppProperties {
         myProps = new Properties();
         InputStream is = null;
         try {
-            is = AppProperties.class.getResourceAsStream("application.properties");
+            is = AppProperties.class.getResourceAsStream("application.cfg");
 
             if (is != null) {
                 myProps.load(is);
