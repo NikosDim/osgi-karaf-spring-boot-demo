@@ -2,6 +2,7 @@
 <features name="osgi-karaf-spring-boot-demo" xmlns="http://karaf.apache.org/xmlns/features/v1.4.0">
 
     <feature name="osgi-spring-boot-demo-feature" version="${project.version}">
+        <feature version="4.1.3">scr</feature>
         <configfile finalname="/etc/application.cfg" override="true">mvn:com.nemesis/osgi-spring-boot-demo-bundle/${project.version}/cfg/application</configfile>
         <bundle>mvn:com.nemesis/osgi-spring-boot-demo-bundle/${project.version}</bundle>
     </feature>
