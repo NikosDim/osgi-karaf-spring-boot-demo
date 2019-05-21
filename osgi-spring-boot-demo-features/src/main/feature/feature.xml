@@ -2,8 +2,8 @@
 <features name="osgi-karaf-spring-boot-demo" xmlns="http://karaf.apache.org/xmlns/features/v1.4.0">
 
     <feature name="osgi-spring-boot-demo-feature" version="${project.version}">
+        <configfile finalname="/etc/application.cfg" override="true">mvn:com.nemesis/osgi-spring-boot-demo-bundle/${project.version}/cfg/application</configfile>
         <bundle>mvn:com.nemesis/osgi-spring-boot-demo-bundle/${project.version}</bundle>
-        <configfile finalname="/etc/application.cfg" override="false">mvn:com.interlink/spog-broker-bundle/${project.version}/cfg/application</configfile>
     </feature>
 
 </features>

@@ -23,6 +23,12 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-starter-tomcat</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -102,9 +108,6 @@
                         <Embed-Transitive>
                             true
                         </Embed-Transitive>
-                        <Include-Resource>
-                            src/main/resources/application.cfg
-                        </Include-Resource>
                         <Service-Component>*</Service-Component>
                         <_dsannotations>*</_dsannotations>
                     </instructions>
